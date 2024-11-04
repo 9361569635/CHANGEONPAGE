@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            position: absolute;
+            border: solid 3px black;
+            top: 85px;
+            left: 360px;
+            width: 200px;
+            height: 250px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #h{
+            color: rgb(242, 119, 12);
+        }
+        img{
+            width: 160px;
+            height: 100px;
+        }
+        #i4{
+            margin-left: 50px;
+            margin-top: 20px;
+            position: fixed;
+        }
+        #i5{
+            position: absolute;
+            position: fixed;
+            margin-top: 50px;
+            margin-left: 16px;
+            width: 160px;
+            height: 100px;
+            border: solid 2px black;
+            border-radius: 20px;
+        }
+        #i6{
+            margin-left: 30px;
+            position: fixed;
+            margin-top: 160px;
+           
+        }
+        button{
+            margin-left: 0px;
+            margin-top: 30px;
+            background-color: rgb(31, 31, 193);
+            color: azure;
+            border-radius: 10px;
+        }
+        #main1{
+            position: absolute;
+            top: 70px;
+            left: 760px;
+            border: solid 3px black;
+            width: 200px;
+            height: 280px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        
+        #h1{
+            margin-top: 0px;
+            color: rgb(242, 119, 12);
+        }
+        #b1{
+            position: absolute;
+            top: 270px;
+            right: 120px;
+            background-color: rgb(198, 202, 202);
+            color: black;
+            border-radius: 7px;
+        }
+        #b2{
+            position: absolute;
+            top: 270px;
+            right: 60px;
+            background-color: rgb(44, 43, 43,0.5);
+            color: azure;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <table>
+            <h1 id="h">profile</h1> 
+            <tr>
+                <td><input type="text" placeholder="name" id="i1"></td>
+            </tr>
+            <tr>
+                <td> <input type="text" placeholder="profileurl" id="i2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="about" id="i3"></td>
+            </tr>
+        </table>
+        <button onclick="raghul()" id="b">submit</button>
+        
+    </div>
+    <br><br>
+    <div id="main1">
+        <table>
+            <h1 id="h1">profile</h1>
+            <tr>
+                <td><h2 id="i4"></h2></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="" alt="" id="i5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <P id="i6"></P>
+                </td>
+            </tr>
+        </table>
+        <button id="b1">light</button>
+        <button id="b2">dark</button>
+    </div>
+    <script>
+        function raghul(){
+          let name=document.getElementById("i1").value;
+          document.getElementById("i4").innerHTML=name;
+          let link=document.getElementById("i2").value;
+          document.getElementById("i5").src=link;
+          let about=document.getElementById("i3").value;
+          document.getElementById("i6").innerHTML=about;
+        }
+        document.getElementById("b1").onclick=function(){
+            document.getElementById("main1").style.backgroundColor="white";
+        }
+        document.getElementById("b2").onclick=function(){
+            document.getElementById("main1").style.backgroundColor=" rgb(44, 43, 43,0.5)";
+        }
+    </script>
+</body>
+</html>
